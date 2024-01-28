@@ -1,0 +1,9 @@
+{
+  "name": "brownfield",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Burak Güner <burak.guner@callstack.com>",
+  "license": "MIT",
+  "private": true,
+  "packageManager": "yarn@4.0.2"
+}

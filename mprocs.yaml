@@ -1,0 +1,2 @@
+procs:
+  metro: yarn start
