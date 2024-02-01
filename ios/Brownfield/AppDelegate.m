@@ -15,13 +15,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    CGRect bounds = [[UIScreen mainScreen] bounds];
+    _window = [[UIWindow alloc] initWithFrame: bounds];
+    
+    _bridge = [[RCTBridge alloc] initWithDelegate: self launchOptions: @{}];
     // Override point for customization after application launch.
     return YES;
 }
 
 
 #pragma mark - UISceneSession lifecycle
-
 
 - (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
     // Called when a new scene session is being created.
@@ -34,6 +38,18 @@
     // Called when the user discards a scene session.
     // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+}
+
+#pragma mark - bridge delegate
+
+- (NSURL *)sourceURLForBridge:(RCTBridge *)bridge { 
+{
+#if DEBUG
+    return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index"];
+#else
+    return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+#endif
+}
 }
 
 

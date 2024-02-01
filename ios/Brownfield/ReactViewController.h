@@ -6,8 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <React/RCTBridgeDelegate.h>
 
-@interface ViewController : UIViewController
+@interface ReactViewController : UIViewController
 
 
 @end

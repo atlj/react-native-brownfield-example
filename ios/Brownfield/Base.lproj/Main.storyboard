@@ -1,24 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Trq-5R-iJI">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="SCb-R4-izi">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ep5-bJ-Fxw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="Trq-5R-iJI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ns0-hc-YMG">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="igM-zH-e0i" kind="relationship" relationship="rootViewController" id="D6C-6s-af4"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1263" y="-4"/>
+        </scene>
+        <!--Native screen-->
+        <scene sceneID="1Ze-cD-P6y">
+            <objects>
+                <viewController id="igM-zH-e0i" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4a8-sw-ep6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi mom!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTp-9s-U5s">
+                                <rect key="frame" x="164.66666666666666" y="415.33333333333331" width="63.666666666666657" height="21.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FH0-ij-y6u">
+                                <rect key="frame" x="113" y="466" width="167" height="34.333333333333314"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Show React Native"/>
+                                <connections>
+                                    <segue destination="CzX-hX-AdI" kind="show" id="MJM-i3-sUH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aOo-aR-dvO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FH0-ij-y6u" firstAttribute="top" secondItem="dTp-9s-U5s" secondAttribute="bottom" constant="29.333333333333314" id="5xk-Pw-hBO"/>
+                            <constraint firstItem="aOo-aR-dvO" firstAttribute="bottom" secondItem="FH0-ij-y6u" secondAttribute="bottom" constant="317.66666666666669" id="mCU-HS-FLk"/>
+                            <constraint firstItem="FH0-ij-y6u" firstAttribute="centerX" secondItem="dTp-9s-U5s" secondAttribute="centerX" id="s7a-11-AUF"/>
+                            <constraint firstItem="FH0-ij-y6u" firstAttribute="centerX" secondItem="4a8-sw-ep6" secondAttribute="centerX" id="y1W-bd-HCv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Native screen" id="WEo-16-8dN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R0a-Qi-4fw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-353.43511450381681" y="-4.2253521126760569"/>
+        </scene>
+        <!--React View Controller-->
+        <scene sceneID="z4q-AV-vyW">
+            <objects>
+                <viewController id="CzX-hX-AdI" customClass="ReactViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zQ0-sh-wo1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4Xm-P4-WDq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LkV-Ik-66r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="505" y="-4"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

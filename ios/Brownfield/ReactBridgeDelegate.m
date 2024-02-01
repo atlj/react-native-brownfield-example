@@ -5,8 +5,10 @@
 //  Created by Burak Güner on 30.01.2024.
 //
 
-#import "RCTBridge+ReactBridgeDelegate.h"
+#import "ReactBridgeDelegate.h"
+#import <React/RCTBundleURLProvider.h>
 
-@implementation RCTBridge (ReactBridgeDelegate)
+@implementation ReactBridgeDelegate
+
 
 @end

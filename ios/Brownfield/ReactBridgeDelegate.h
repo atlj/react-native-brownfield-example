@@ -5,11 +5,11 @@
 //  Created by Burak Güner on 30.01.2024.
 //
 
-#import "RCTBridge.h"
+#import "React/RCTBridge.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RCTBridge (ReactBridgeDelegate)
+@interface ReactBridgeDelegate : NSObject<RCTBridgeDelegate>
 
 @end
 
